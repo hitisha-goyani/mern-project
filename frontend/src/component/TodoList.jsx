@@ -12,16 +12,16 @@ const TodoList = ({todoData,editTodo,deleteTodo}) =>{
             </thead>
             <tbody>
                 {
-                    todoData.map((todo)=>{
+                    todoData.map((t)=>{
                         return(
-                            <tr key={todo.id}>
-                                <td>{todo.task}</td>
-                                <td>{todo.description}</td>
+                            <tr key={t._id}>
+                                <td>{t.task}</td>
+                                <td>{t.description}</td>
                                 <td>
-                                    <button onClick={()=>editTodo(todo.id)}>Edit</button>
+                                    <button onClick={()=>editTodo(t._id)}>Edit</button>
                                 </td>
                                   <td>
-                                <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+                                <button onClick={() => deleteTodo(t._id)}>Delete</button>
                                 </td>
                             </tr>
                         )
